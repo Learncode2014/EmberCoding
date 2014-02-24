@@ -1,0 +1,55 @@
+<script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.0.0/handlebars.js"></script>
+<script src="http://builds.emberjs.com/ember-latest.js"></script>
+<script type="text/x-handlebars" data-template-name="list">
+  <h3 class="demo-panel-title">This is the list template</h3>
+  <ul>
+  {{#each item in content}}
+      <li>{{item}}</li>
+  {{/each}}
+   </ul>
+</script>
+
+
+<script type="text/x-handlebars" data-template-name="Todo">
+  <h3 class="demo-panel-title">This is the TODO list template</h3>
+  <ul>
+  {{#each item in content}}
+      <li>{{item}}</li>
+  {{/each}}
+   </ul>
+</script>
+
+<script type="text/x-handlebars" data-template-name="Photos">
+   
+  {{#each}}
+    <img {{bind-attr src=url}} alt="Logo"/> 
+  {{/each}}
+    </script>
+    
+<script type="text/x-handlebars" data-template-name="About">
+    <p>{{message}}</p>
+</script>
+
+
+<script type="text/x-handlebars" data-template-name="index">
+  <h3 class="demo-panel-title">This is the index template</h3>
+      <h1>{{title}}</h1>
+  <p>{{message}}</p>
+  
+</script>
+
+ 
+        <script type="text/x-handlebars" data-template-name="application">
+          <div class="container">
+              <h2><small>Shawn P's Minimum Viable Ember.js QuickStart Guide</small></h2>
+            <p>{{message}}</p>
+            <div class="row">{{#linkTo index class="span3 btn btn-large btn-block"}}Home{{/linkTo}}
+              {{#linkTo list class="span3 btn btn-large btn-block"}}List{{/linkTo}}
+                 {{#linkTo About class="span3 btn btn-large btn-block"}}About{{/linkTo}}
+                 {{#linkTo Todo class="span3 btn btn-large btn-block"}}Todo{{/linkTo}}
+                 {{#linkTo Photos class="span3 btn btn-large btn-block"}}Photos{{/linkTo}} 
+            </div>
+            {{outlet}}
+          </div>
+        </script>
+            
